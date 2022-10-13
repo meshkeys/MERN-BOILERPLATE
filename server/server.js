@@ -5,8 +5,7 @@ const app = express();
 const URI = "mongodb+srv://mesh:kainos4Dunamis@wakabook1.4kfos.mongodb.net/?retryWrites=true&w=majority"
 
 async function connect() {
-    try {
-        await mongoose.connect(URI);
+    try { await mongoose.connect(URI);
         console.log("connected to mongoDb")
     } catch(error){
         console.log(error);
