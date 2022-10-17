@@ -1,7 +1,7 @@
 import React from 'react';
 import * as Yup from "yup"
 import { Formik, Form, Field, ErrorMessage } from "formik"
-import { FormGroup, FormControl, Button } from "react-bootstrap"
+import { FormGroup, Button } from "react-bootstrap"
 
 function StudentForm(props) {
 
@@ -19,6 +19,7 @@ function StudentForm(props) {
             <Form>
             <FormGroup>
                 <Field name="name" type="text" className="form-control"/>
+                <input type="text" placeholder='write here'>Write here</input>
                 <ErrorMessage name="name" className='d-block invlaid-feedback' component='span'/>
                 </FormGroup>  
                 <FormGroup>

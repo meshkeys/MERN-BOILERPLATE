@@ -2,10 +2,10 @@ import React from 'react';
 import { Nav, Navbar, Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
-import CreateStudent from './Components/createStudent';
-import EditStudent from './Components/editStudent';
-import StudentList from './Components/studentList';
+import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import CreateStudent from './Components/CreateStudent';
+import EditStudent from './Components/EditStudent';
+import StudentList from './Components/StudentList';
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
   <Navbar bg="dark" variant="dark">
     <Container>
       <Navbar.Brand>
-        <Link to={"/crete-student"} className="nav-link">
+        <Link to={"/create-student"} className="nav-link">
           React MERN Stack App
         </Link>
       </Navbar.Brand>
@@ -39,16 +39,16 @@ function App() {
   <Row>
     <Col md={12}>
       <div className='wrapper'>
-        <Switch>
+        <Routes>
           <Route exact path ="/" 
           component={CreateStudent}/>
-          <Route path ="/create-student" 
+          <Route path ="/Create-student" 
           component={CreateStudent}/>
           <Route path ="/EditStudent" 
           component={EditStudent}/>
-          <Route path ="/studentlist" 
+          <Route path ="/StudentList" 
           component={StudentList}/>
-        </Switch>
+        </Routes>
       </div>
     </Col>
   </Row>
